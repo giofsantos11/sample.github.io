@@ -86,7 +86,6 @@ footer {
 footer p {
     margin-bottom: 10px;
 }
-
 /* Ensure the list items stay on the same line */
 .bee-horizontal {
   display: flex;
@@ -105,7 +104,7 @@ footer p {
 
 /* Dropdown content (hidden by default) */
 .dropdown-content {
-  display: none;
+  display: none; /* Hidden by default */
   position: absolute;
   top: 100%; /* Place it directly below the "PREPARE" tab */
   left: 0;
