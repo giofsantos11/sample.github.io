@@ -1072,12 +1072,13 @@
 
 	<!-- JavaScript to Toggle Dropdown on Click -->
 	<script>
-		document.getElementById('prepare-link').addEventListener('click', function(event) {
-			event.preventDefault(); // Prevent default link behavior
-			var dropdown = document.getElementById('dropdown-content');
-			dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
-		});
+	  document.getElementById('prepare-link').addEventListener('click', function(event) {
+	    event.preventDefault();  // Prevents the default anchor behavior
+	    var dropdown = document.getElementById('dropdown-content');
+	    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+	  });
 	</script>
+
 		<div class="bee-row bee-row-2">
 			<div class="bee-row-content">
 				<div class="bee-col bee-col-1 bee-col-w3">
