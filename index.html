@@ -1051,17 +1051,23 @@
 					<div class="bee-block bee-block-2 bee-menu">
 						<nav class="bee-menu">
 							<ul class="bee-horizontal with-bee-hamburger">
-								<li><a href="www.example.com" target="_self" title="">FIND JOBS</a></li>
-								<li><a href="www.example.com" target="_self" title="">RECRUIT</a></li>
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" id="prepare-link">PREPARE</a>
-									<ul class="dropdown-content" id="dropdown-content">
-										<li><a href="www.example.com/expat-life" target="_self">Expat Life in Japan</a></li>
-										<li><a href="www.example.com/immigration" target="_self">Immigration</a></li>
-										<li><a href="www.example.com/cultural-fitness" target="_self">Cultural Fitness</a></li>
-									</ul>
-								</li>
-								<li><a href="www.example.com" target="_self" title="">ABOUT US</a></li>
+							    <li><a href="www.example.com" target="_self" title="">FIND JOBS</a></li>
+							    <li><a href="www.example.com" target="_self" title="">RECRUIT</a></li>
+							    <li class="dropdown">
+							        <a href="#" class="dropdown-toggle" id="prepare-link">PREPARE</a>
+							        <div class="dropdown-content" id="dropdown-content">
+							            <div class="dropdown-item">
+							                <a href="www.example.com/expat-life" target="_self">Expat Life in Japan</a>
+							            </div>
+							            <div class="dropdown-item">
+							                <a href="www.example.com/immigration" target="_self">Immigration</a>
+							            </div>
+							            <div class="dropdown-item">
+							                <a href="www.example.com/cultural-fitness" target="_self">Cultural Fitness</a>
+							            </div>
+							        </div>
+							    </li>
+							    <li><a href="www.example.com" target="_self" title="">ABOUT US</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -1073,11 +1079,12 @@
 	<!-- JavaScript to Toggle Dropdown on Click -->
 	<script>
 	  document.getElementById('prepare-link').addEventListener('click', function(event) {
-	    event.preventDefault();  // Prevents the default anchor behavior
+	    event.preventDefault();  // Prevents the default link behavior
 	    var dropdown = document.getElementById('dropdown-content');
-	    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+	    dropdown.classList.toggle('show');  // Toggles the 'show' class
 	  });
 	</script>
+
 
 		<div class="bee-row bee-row-2">
 			<div class="bee-row-content">
