@@ -87,7 +87,7 @@ footer p {
     margin-bottom: 10px;
 }
 
-/* Ensure the list items stay on the same line */
+/* Basic reset for navigation */
 .bee-horizontal {
   display: flex;
   list-style-type: none;
@@ -95,22 +95,36 @@ footer p {
   margin: 0;
 }
 
-/* Style the dropdown */
+.bee-horizontal li {
+  margin-right: 20px;
+}
+
+/* Dropdown container */
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-/* Dropdown content (hidden by default) */
+/* Dropdown content - Hidden by default */
 .dropdown-content {
-  display: none !important;
+  display: none;
+  position: absolute;
+  top: 100%;  /* Position it below the dropdown tab */
+  left: 0;
+  background-color: #f9f9f9;
+  display: flex; /* Aligns dropdown options in a row */
+  width: 100%;  /* Optional: Adjust the width to suit the layout */
+  padding: 10px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Dropdown item */
+.dropdown-item {
+  margin-right: 20px; /* Spacing between the items */
 }
 
 /* Links inside the dropdown */
-.dropdown-content li {
-  list-style: none;
-}
-
 .dropdown-content a {
   color: black;
   padding: 12px 16px;
@@ -118,9 +132,11 @@ footer p {
   display: block;
 }
 
-
-/* Ensure ABOUT US stays on the same line */
-.bee-horizontal li {
-  margin-right: 20px; /* Adjust as needed for spacing */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
 }
 
+/* When dropdown is clicked, show the options */
+.show {
+  display: flex !important;
+}
