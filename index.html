@@ -1021,69 +1021,114 @@
 			padding: 5px 20px;
 			width: 100%
 		}
+
+	
+    /* Ensure the list items stay on the same line */
+    .bee-horizontal {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      justify-content: space-between; /* Ensure the nav items are spaced out evenly */
+    }
+
+    /* Style the dropdown container */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Dropdown button style (in this case, we're styling the link as the button) */
+    .dropbtn {
+      background-color: #4CAF50;
+      color: white;
+      padding: 16px;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      text-align: center;
+    }
+
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+
+    /* Show the dropdown content when hovering over the dropdown container */
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* Change the background color of the dropdown button when hovered */
+    .dropdown:hover .dropbtn {
+      background-color: #3e8e41;
+    }
 	</style>
 </head>
 
 <body>
-	<div class="bee-page-container">
-		<div class="bee-row bee-row-1">
-			<div class="bee-row-content">
-				<div class="bee-col bee-col-1 bee-col-w3">
-					<div class="bee-block bee-block-1 bee-divider">
-						<div class="spacer" style="height:15px;"></div>
-					</div>
-					<div class="bee-block bee-block-2 bee-image">
-						<img alt="WhyNot Logo" class="bee-center bee-fixedwidth" src="Utilities/Whynot_logo0.png" style="width: 25%;" />
-					</div>
-					<div class="bee-block bee-block-3 bee-divider">
-						<div class="spacer" style="height:15px;"></div>
-					</div>
-				</div>
-				<div class="bee-col bee-col-2 bee-col-w4">
-					<div class="bee-block bee-block-1 bee-divider">
-						<div class="spacer" style="height:0px;"></div>
-					</div>
-				</div>
-				<div class="bee-col bee-col-3 bee-col-w5">
-					<div class="bee-block bee-block-1 bee-divider bee-mobile_hide">
-						<div class="spacer" style="height:30px;"></div>
-					</div>
-					<div class="bee-block bee-block-2 bee-menu">
-						<nav class="bee-menu">
-							<ul class="bee-horizontal with-bee-hamburger">
-							    <li><a href="www.example.com" target="_self" title="">FIND JOBS</a></li>
-							    <li><a href="www.example.com" target="_self" title="">RECRUIT</a></li>
-							    <li class="dropdown">
-							        <a href="#" class="dropdown-toggle" id="prepare-link">PREPARE</a>
-							        <div class="dropdown-content" id="dropdown-content">
-							            <div class="dropdown-item">
-							                <a href="www.example.com/expat-life" target="_self">Expat Life in Japan</a>
-							            </div>
-							            <div class="dropdown-item">
-							                <a href="www.example.com/immigration" target="_self">Immigration</a>
-							            </div>
-							            <div class="dropdown-item">
-							                <a href="www.example.com/cultural-fitness" target="_self">Cultural Fitness</a>
-							            </div>
-							        </div>
-							    </li>
-							    <li><a href="www.example.com" target="_self" title="">ABOUT US</a></li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- JavaScript to Toggle Dropdown on Click -->
-	<script>
-	  document.getElementById('prepare-link').addEventListener('click', function(event) {
-	    event.preventDefault();  // Prevents the default link behavior
-	    var dropdown = document.getElementById('dropdown-content');
-	    dropdown.classList.toggle('show');  // Toggles the 'show' class
-	  });
-	</script>
+  <div class="bee-page-container">
+    <div class="bee-row bee-row-1">
+      <div class="bee-row-content">
+        <div class="bee-col bee-col-1 bee-col-w3">
+          <div class="bee-block bee-block-1 bee-divider">
+            <div class="spacer" style="height:15px;"></div>
+          </div>
+          <div class="bee-block bee-block-2 bee-image">
+            <img alt="WhyNot Logo" class="bee-center bee-fixedwidth" src="Utilities/Whynot_logo0.png" style="width: 25%;" />
+          </div>
+          <div class="bee-block bee-block-3 bee-divider">
+            <div class="spacer" style="height:15px;"></div>
+          </div>
+        </div>
+        <div class="bee-col bee-col-2 bee-col-w4">
+          <div class="bee-block bee-block-1 bee-divider">
+            <div class="spacer" style="height:0px;"></div>
+          </div>
+        </div>
+        <div class="bee-col bee-col-3 bee-col-w5">
+          <div class="bee-block bee-block-1 bee-divider bee-mobile_hide">
+            <div class="spacer" style="height:30px;"></div>
+          </div>
+          <div class="bee-block bee-block-2 bee-menu">
+            <nav class="bee-menu">
+              <ul class="bee-horizontal with-bee-hamburger">
+                <li><a href="www.example.com" target="_self" title="">FIND JOBS</a></li>
+                <li><a href="www.example.com" target="_self" title="">RECRUIT</a></li>
+                <li class="dropdown">
+                  <a class="dropbtn" href="#" id="prepare-link">PREPARE</a> <!-- Turn PREPARE into a dropdown button -->
+                  <div class="dropdown-content" id="dropdown-content">
+                    <a href="www.example.com/expat-life" target="_self">Expat Life in Japan</a>
+                    <a href="www.example.com/immigration" target="_self">Immigration</a>
+                    <a href="www.example.com/cultural-fitness" target="_self">Cultural Fitness</a>
+                  </div>
+                </li>
+                <li><a href="www.example.com" target="_self" title="">ABOUT US</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 		<div class="bee-row bee-row-2">
